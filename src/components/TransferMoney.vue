@@ -5,11 +5,38 @@
 </template>
 
 <script>
+import { Client } from '@paymentsds/mpesa';
+
 export default {
   name: "TransferMoney",
   props: {
     msg: String
+  },
+
+  created() {
+    console.log(process.env.VUE_APP_MPESA_API_KEY, process.env.VUE_APP_MPESA_PUBLIC_KEY)
+
+    const client = new Client({
+      apiKey: process.env.VUE_APP_MPESA_API_KEY,
+      publicKey: process.env.VUE_APP_MPESA_PUBLIC_KEY,
+      serviceProviderCode: process.env.VUE_APP_MPESA_SERVICE_PROVIDER
+    })
+
+    client.receive({
+      from: process.env.VUE_APP_FROM_MOBILE_WALLET,
+      reference: '84ALX91',
+      transaction: 'ALAN345X',
+      amount: '2'
+    })
+    .then((result) => {
+        console.log(result);
+    }).catch((err) => {
+        console.log(err)
+    });
+
+    console.log(Client);
   }
+  
 };
 </script>
 
