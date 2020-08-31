@@ -14,10 +14,15 @@ export default {
   },
 
   created() {
+    console.log(process.env.VUE_APP_FROM_MOBILE_WALLET);
+
     const client = new Client({
       apiKey: process.env.VUE_APP_MPESA_API_KEY,
       publicKey: process.env.VUE_APP_MPESA_PUBLIC_KEY,
       serviceProviderCode: process.env.VUE_APP_MPESA_SERVICE_PROVIDER,
+      debugging: true,                 
+      verifySSL: false,
+      userAgent: '<REPLACE>' 
     })
 
     client.receive({
