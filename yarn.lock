@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@paymentsds/mpesa@^0.1.0-alpha-8":
-  version "0.1.0-alpha-8"
-  resolved "https://registry.yarnpkg.com/@paymentsds/mpesa/-/mpesa-0.1.0-alpha-8.tgz#44b3f048539b6cf7dbc499187571376a5a2dba61"
-  integrity sha512-bAQJLdcCbi858B5EIakI18/Kap8HYTp2i16RL+9JZPpLKyLW6Dk+wFwcSNjiVfgo2LeKgH6qurXLZzMpCFFI4g==
+"@paymentsds/mpesa@^0.1.0-alpha-9":
+  version "0.1.0-alpha-9"
+  resolved "https://registry.yarnpkg.com/@paymentsds/mpesa/-/mpesa-0.1.0-alpha-9.tgz#f5f9a811ebf19065ad2c23afe1f55f0925c46d78"
+  integrity sha512-cLvytiaCjUgAgWtt3CjPVcNPlAIXkKgH3/IppBfOei8s/J8tgFEWDG/OVUYilld0yzwWPTUAey8VVtOghm8Znw==
   dependencies:
     axios "^0.19.2"
 
